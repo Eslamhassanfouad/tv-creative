@@ -1,0 +1,225 @@
+@font-face {
+  font-family: "Yatra One";
+  src: url("assets/fonts/YatraOne-Regular.ttf") format("truetype"); /* Adjust the path as necessary */
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.campaign-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-section {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.video-section iframe {
+  width: 100%;
+  height: 400px;
+  border-radius: 8px;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+.video-overlay .btn {
+  padding: 10px 20px;
+  background-color: #ff9900;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Yatra One";
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.video-overlay .btn:hover {
+  background-color: #774700;
+}
+
+.content-section p,
+.locked-text-title,
+.locked-text-subtext {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  text-align: justify;
+}
+li {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+ol {
+  margin: 0px !important;
+}
+
+.locked-part {
+  position: relative;
+}
+.locked-text,
+.locked-text-title,
+.locked-text-subtext {
+  position: relative;
+  filter: blur(5px);
+  color: #999;
+  margin-top: 20px;
+  text-align: justify;
+  user-select: none; /* Disable text selection */
+  pointer-events: none; /* Prevent interaction with the text */
+}
+
+.locked-notice {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #000;
+  pointer-events: none;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  font-family: "Yatra One";
+}
+
+.popup-content h2 {
+  margin-bottom: 20px;
+  font-family: "Yatra One";
+}
+
+.popup-content label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.popup-content input {
+  width: 96%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.popup-content button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Yatra One";
+}
+
+.popup-content button:hover {
+  background-color: #218838;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.continue-reading {
+  position: absolute; /* Position it absolutely */
+  top: 3%; /* Center it vertically */
+  left: 50%; /* Center it horizontally */
+  transform: translate(-50%, -50%); /* Adjust to center */
+  padding: 10px 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3; /* Ensure it is above the blur */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.continue-reading:hover {
+  background-color: #774700;
+  color: white;
+  box-shadow: none;
+}
+
+@media (max-width: 777px) {
+  .content-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+  }
+  .popup-content input {
+    width: 94%;
+  }
+  .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+  }
+  .continue-reading,
+  #open-popup {
+    font-size: 15px;
+  }
+  .continue-reading {
+    top: 1%;
+  }
+}
